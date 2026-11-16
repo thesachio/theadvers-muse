@@ -2,7 +2,7 @@
 
 ## Metode aktif: Flow Money First (diputus 22:33 WIB 16 Nov 2026)
 
-- `flow-money-first/` — pintu masuk runtime (bootloader: baca 4 berkas `methodology/`; sumber kebenaran = `methodology/aturan-alur-first.md`). Bootloader-nya diadaptasi untuk repo ini — `SOUL.md` / `AGENTS.md` di root repo ini milik Metode Segitiga, bukan flow.
+- `flow-money-first/` — pintu masuk runtime (bootloader: baca 4 berkas `methodology/`; sumber kebenaran = `methodology/aturan-alur-first.md`). Identitas + konstitusi flow (`SOUL.md`, `AGENTS.md`) kini ada di root repo ini (di-upload 17 Nov 2026); versi Segitiga-nya diarsipkan sebagai `archive/segitiga-v2/SOUL-segitiga-v2.md` dan `archive/segitiga-v2/AGENTS-segitiga-v2.md`.
 - `flow-a-intel/`, `flow-b-map/`, `flow-c-inventory/`, `flow-d-explore/`, `flow-e-test/`, `flow-f-compose/`, `flow-g-verdict/` — skill per Tahap A–G.
 - `flow-autopilot/` — full-autopilot proyek penuh (semua klaster, semua jalur, dari kursor sampai sapuan akhir atas satu perintah berdiri; /stop mencabut otorisasi seketika).
 

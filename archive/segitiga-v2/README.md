@@ -8,7 +8,7 @@ Keputusan Kim 22:33 WIB 16 Nov 2026: metode kerja aktif adalah **Flow Money Firs
 
 ## Isi arsip
 
-- `SOUL.md`, `AGENTS.md` — identitas + konstitusi operasional upstream theadvers.
+- `SOUL-segitiga-v2.md`, `AGENTS-segitiga-v2.md` — identitas + konstitusi operasional upstream theadvers (diganti nama 17 Nov 2026 agar tidak bentrok dengan `SOUL.md` / `AGENTS.md` versi flow di root repo).
 - `PERSONA.md`, `CONSTITUTION.md` — adaptasi Muse-nya (yang dipakai Muse selama profil ini aktif).
 - `methodology/METHODOLOGY-SEGITIGA.md` — dokumen metode Segitiga.
 - `skills/sc-*/` — 8 skill Segitiga (sc-pre-intel, sc-a-scope, sc-b-map, sc-c-hunt, sc-d-prove, sc-e-verdict, sc-f-report, sc-autopilot).
@@ -22,4 +22,4 @@ Katalog 52 plugin (`references/`, `methodology/attack-forms/`, `methodology/doma
 
 ## Metode aktif
 
-Flow Money First — aturan kanonik di `../methodology/aturan-alur-first.md` (+ resume, acuan Tahap B, rancangan hemat Fase D), skill di `../skills/flow-*/`, identitas + konstitusi di repo `thesachio/moneyflow`.
+Flow Money First — aturan kanonik di `../methodology/aturan-alur-first.md` (+ resume, acuan Tahap B, rancangan hemat Fase D), skill di `../skills/flow-*/`, identitas + konstitusi flow di `../SOUL.md` dan `../AGENTS.md` (juga di repo `thesachio/moneyflow`).

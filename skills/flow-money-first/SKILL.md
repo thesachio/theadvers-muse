@@ -4,13 +4,16 @@ Skill pintu masuk metode Flow Money First — audit keamanan smart contract yang
 
 ## Bootloader (wajib, sebelum kerja apa pun)
 
-Salinan ini diadaptasi untuk repo theadvers-muse. Baca berkas-berkas ini (jalur relatif terhadap root repo ini, kecuali yang ditandai repo moneyflow):
+Baca berkas-berkas ini (jalur relatif terhadap root repo ini):
 
-1. `methodology/aturan-alur-first.md` — aturan kanonik (A1–A5, B1–B16, C1–C9, Tahap C–G). **Ini sumber kebenaran.** Bila SKILL.md ini berbeda dengannya, berkas aturan yang berlaku.
-2. `methodology/resume-aturan-preferensi-alur-first.md` — ringkasan aturan + preferensi mengikat.
-3. `methodology/acuan-workflow-tahap-B.md` — bila mengerjakan Tahap B.
-4. `methodology/rancangan-hemat-fase-d.md` — bila mengerjakan Fase D/E (aturan hemat + prinsip efisiensi + lantai bawah).
-5. Identitas + konstitusi operasional flow (`SOUL.md`, `AGENTS.md`) ada di repo `thesachio/moneyflow` — baca dari sana bila perlu. JANGAN baca `SOUL.md` / `AGENTS.md` repo ini: itu berkas upstream Metode Segitiga (identitas + konstitusi Muse-nya ada di `PERSONA.md` / `CONSTITUTION.md`).
+1. `SOUL.md` — identitas + 7 Hukum Kognitif Besi + lantai bawah (versi flow, di root repo ini).
+2. `methodology/aturan-alur-first.md` — aturan kanonik (A1–A5, B1–B16, C1–C9, Tahap C–G). **Ini sumber kebenaran.** Bila SKILL.md ini berbeda dengannya, berkas aturan yang berlaku.
+3. `methodology/resume-aturan-preferensi-alur-first.md` — ringkasan aturan + preferensi mengikat.
+4. `methodology/acuan-workflow-tahap-B.md` — bila mengerjakan Tahap B.
+5. `methodology/rancangan-hemat-fase-d.md` — bila mengerjakan Fase D/E (aturan hemat + prinsip efisiensi + lantai bawah).
+6. `AGENTS.md` — konstitusi operasional flow (delegasi, gerbang) di root repo ini.
+
+Catatan: `SOUL.md` / `AGENTS.md` di root repo ini adalah versi flow. Versi Metode Segitiga-nya diarsipkan sebagai `archive/segitiga-v2/SOUL-segitiga-v2.md` dan `archive/segitiga-v2/AGENTS-segitiga-v2.md`.
 
 ## Peta tahap (ringkas)
 
