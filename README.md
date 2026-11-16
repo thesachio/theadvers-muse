@@ -1,3 +1,5 @@
+> **Metode aktif: Flow Money First.** Sejak 22:33 WIB 16 Nov 2026 (keputusan Kim), metode kerja aktif repo ini adalah Flow Money First — aturan kanonik di `methodology/aturan-alur-first.md` dan skill di `skills/flow-*`. Metode Segitiga v2.0 (STAGE-0 + A–F) sudah tidak dipakai sebagai metode aktif; seluruh berkasnya diarsipkan utuh di `archive/segitiga-v2/` sebagai rujukan/legacy.
+
 # theadvers — Profil Muse (Metode Segitiga v2.0)
 
 Profil audit adversarial untuk Muse, diadaptasi dari workflow

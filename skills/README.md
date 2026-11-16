@@ -8,6 +8,6 @@
 
 Berkas metode flow ada di `methodology/aturan-alur-first.md`, `methodology/resume-aturan-preferensi-alur-first.md`, `methodology/acuan-workflow-tahap-B.md`, `methodology/rancangan-hemat-fase-d.md`. Identitas + konstitusi operasional flow (`SOUL.md`, `AGENTS.md`) ada di repo `thesachio/moneyflow`.
 
-## Rujukan / legacy: Metode Segitiga v2.0
+## Rujukan / legacy: Metode Segitiga v2.0 (diarsipkan 17 Nov 2026)
 
-- `sc-pre-intel/`, `sc-a-scope/`, `sc-b-map/`, `sc-c-hunt/`, `sc-d-prove/`, `sc-e-verdict/`, `sc-f-report/`, `sc-autopilot/` — skill Metode Segitiga (STAGE-0 + A–F). Bukan metode aktif; dipakai hanya sebagai rujukan untuk proyek yang sudah berjalan di bawahnya.
+- Skill Segitiga (`sc-pre-intel/`, `sc-a-scope/`, `sc-b-map/`, `sc-c-hunt/`, `sc-d-prove/`, `sc-e-verdict/`, `sc-f-report/`, `sc-autopilot/`) dipindahkan utuh ke `archive/segitiga-v2/skills/` beserta seluruh berkas profil Segitiga lainnya (metode, gerbang, SOUL/AGENTS, PERSONA/CONSTITUTION, catatan SYNC). Bukan metode aktif; dipakai hanya sebagai rujukan untuk proyek yang sudah berjalan di bawahnya.
