@@ -5,13 +5,13 @@ description: Tahap G — Verdict. Verdict 06/07/08/09 per kandidat, tiga verdict
 
 # Skill flow-g-verdict — Tahap G (Verdict)
 
-Tahap G = mengadili tiap kandidat dan menghitung distribusi akhir di seluruh protokol. Bentuk rinci = yang sudah dipraktikkan (diputus 22:33 WIB 16 Nov 2026). Sumber kebenaran: `methodology/aturan-alur-first.md` (seksi D — Tahap G + C1–C9) + `verify/VERDICT.md` + `verify/SEVERITY-RUBRIC.md`. Skill ini menuntun eksekusi; aturan ada di berkas itu.
+Tahap G = mengadili tiap kandidat dan menghitung distribusi akhir di seluruh protokol. Bentuk rinci = yang sudah dipraktikkan (diputus 22:33 WIB 16 Nov 2026). Sumber kebenaran: `methodology/aturan-alur-first.md` (seksi D — Tahap G + C1–C11) + `verify/VERDICT.md` + `verify/SEVERITY-RUBRIC.md`. Skill ini menuntun eksekusi; aturan ada di berkas itu.
 
 ## Langkah
 
 ### 1. Verdict per kandidat: 06 / 07 / 08 / 09
 
-- **09 — temuan terkonfirmasi:** mekanisme TERBUKTI + P&L live > 0 / kerugian live terukur.
+- **09 — temuan terkonfirmasi:** mekanisme TERBUKTI + kerugian yang bisa dibuktikan (C10) — P&L live > 0 TIDAK lagi disyaratkan; standar TERBUKTI mengikuti C11 (rantai jalur saling bergantung, bukan satu fungsi pendek).
 - **08 — valid tapi tidak memenuhi syarat:** mekanisme terbukti, tapi out-of-scope / known / peran terpercaya / debu.
 - **07 — butuh langkah lanjut:** logika belum terbantahkan, tapi butuh verifikasi lanjutan (state on-chain spesifik, komponen eksternal).
 - **06 — terbantahkan / tidak valid:** mekanisme patah saat pembuktian.

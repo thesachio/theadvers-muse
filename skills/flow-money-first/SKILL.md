@@ -7,7 +7,7 @@ Skill pintu masuk metode Flow Money First — audit keamanan smart contract yang
 Baca berkas-berkas ini (jalur relatif terhadap root repo ini):
 
 1. `SOUL.md` — identitas + 7 Hukum Kognitif Besi + lantai bawah (versi flow, di root repo ini).
-2. `methodology/aturan-alur-first.md` — aturan kanonik (A1–A5, B1–B16, C1–C9, Tahap C–G). **Ini sumber kebenaran.** Bila SKILL.md ini berbeda dengannya, berkas aturan yang berlaku.
+2. `methodology/aturan-alur-first.md` — aturan kanonik (A1–A5, B1–B16, C1–C11, Tahap C–G). **Ini sumber kebenaran.** Bila SKILL.md ini berbeda dengannya, berkas aturan yang berlaku.
 3. `methodology/resume-aturan-preferensi-alur-first.md` — ringkasan aturan + preferensi mengikat.
 4. `methodology/acuan-workflow-tahap-B.md` — bila mengerjakan Tahap B.
 5. `methodology/rancangan-hemat-fase-d.md` — bila mengerjakan Fase D/E (aturan hemat + prinsip efisiensi + lantai bawah).

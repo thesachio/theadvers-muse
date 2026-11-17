@@ -5,7 +5,7 @@ description: Tahap D — Eksplorasi per-alur, dua gelombang (buta → berpengeta
 
 # Skill flow-d-explore — Tahap D (Eksplorasi)
 
-Tahap D = buruan per alur. Unit round = **per-alur**, dua gelombang (diputus 22:33 WIB 16 Nov 2026). Sumber kebenaran: `methodology/aturan-alur-first.md` (seksi D — Tahap D + B12). Skill ini menuntun eksekusi; aturan ada di berkas itu.
+Tahap D = buruan per alur. Unit round = **per-alur**, dua gelombang (diputus 22:33 WIB 16 Nov 2026). Sumber kebenaran: `methodology/aturan-alur-first.md` (seksi D — Tahap D + B12 + C10/C11). Skill ini menuntun eksekusi; aturan ada di berkas itu.
 
 ## Prasyarat
 
@@ -24,14 +24,14 @@ Daftar alur (enumerasi + EV per alur, dari B02+B04) sudah ada sebelum D. Tanpa d
 
 - Silang: inversi handoff + konservasi + jejak event live + katalog 52 plugin (baca hanya plugin yang gejalanya cocok; `[NO-CATALOG]` bila tidak ada yang cocok — kandidat DILARANG gugur hanya karena tidak cocok katalog).
 - Temuan di luar katalog = kandidat plugin baru (niat C1: jangan batasi eksplorasi).
-- Keluaran: kandidat QUEUED (QD..) dengan prioritas P1–P5 + DORMAN + disposisi Q/RADAR.
+- Keluaran: kandidat QUEUED (QD..) dengan prioritas P1–P5 + DORMAN (hanya bila gagal gate C10 — lihat §3) + disposisi Q/RADAR.
 
 ### 3. Kartu lead + invariant
 
 - Kartu lead 1:1 dari kandidat QUEUED; **tiap kartu wajib klaim finansial sendiri**.
 - Invariant dirumuskan bersama kartu leadnya. Tiap invariant **WAJIB mencantumkan sumbernya**: field kontrak handoff, atau baris docs/NatSpec. Tiga lapis: L1 dalam segmen (INV-Sx), L2 handoff + simpul (INV-Hx, INV-Jx), L3 ujung-ke-ujung/komposisi (INV-Fx). Tiap invariant wajib akibat finansial bila pecah.
 - Registry invariant satu penomoran global (B3), diisi mulai Tahap D.
-- **Gate finansial:** lead masuk Tahap E HANYA bila punya plafon live terukur; plafon live 0 → DORMAN (dengan syarat buka-ulang konkret).
+- **Gate finansial (C10, direvisi 17 Nov 2026):** lead masuk Tahap E bila kerugian yang bisa dibuktikan — mekanisme jalan di fork/test atas kode+state nyata + plafon terukur + pemicu terjangkau lewat jalur operasi normal (tanpa peran istimewa/state eksotis). **Plafon live 0 TIDAK lagi membuat lead DORMAN** — P&L live tidak disyaratkan; syarat buka-ulang konkret tetap dicatat bila ada.
 
 ## Aturan yang mengikat
 

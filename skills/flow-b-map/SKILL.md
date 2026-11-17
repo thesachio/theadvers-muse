@@ -32,6 +32,10 @@ Rantai utama proyek: getCode 1–3 alamat inti di blok referensi + satu view mur
 
 B8 diulang di awal fase uji per klaster sebelum PoC. Tidak live-match → wadah **TUNDA-LIVE**: tercatat di ledger sisa, nol waktu eksekusi, dibuka lagi bila deployment live muncul atau Kim memerintah cek ulang, ditinjau di sapuan akhir.
 
+**Cara kerja B8 (diputus 17 Nov 2026 08:26 + 08:33 WIB, mengikat):**
+- **Utamakan alur, log untuk verifikator terakhir:** tahu suatu mekanisme work atau tidak dari tes tool (baca kode + cast/cek live + uji fork di Tahap E), BUKAN dari pindai log tx orang lain di blockchain. Pindai log = pilihan terakhir yang mahal, hanya untuk verifikasi akhir (Tahap G / sapuan akhir). Preseden: B8 P4 memakan ~8,5 jam pindai RelayedRootBundle per rantai — jangan ulangi.
+- **Cek desain kode dulu:** untuk tahu suatu nilai 0 atau bukan, cek dari desain kode apakah DISET 0 oleh kode atau MEMANG BISA MEMUAT — jangan simpulkan dari log. Contoh: nilai yang di-set dari parameter input tanpa require/validasi = BISA MEMUAT non-zero by design; live 0 berasal dari off-chain, bukan batasan kode.
+
 ### 4. Penutupan graf + sapuan akhir (B9)
 
 Scope mapping = usaha yang cukup + 4 mekanisme deteksi miss di eksplorasi: (1) baca ulang mendalam per klaster; (2) cek handoff + konservasi; (3) jejak event live sebagai enumerasi independen; (4) cek penutupan graf. **Enumerasi independen kedua = rerun sensus manual** (diputus 22:33 WIB 16 Nov 2026; pilot: rerun menemukan 15 baris yang sensus pertama lewatkan). Bukan AST, bukan regex yang sama. Cara parser independen tetap terbuka sebagai riset.

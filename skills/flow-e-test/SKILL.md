@@ -5,7 +5,7 @@ description: Tahap E — Uji test. PoC fork-live + P&L terukur per kandidat, bat
 
 # Skill flow-e-test — Tahap E (Uji test)
 
-Tahap E = membuktikan/membantah mekanisme di fork live + mengukur P&L. Bentuk rinci = yang sudah dipraktikkan (diputus 22:33 WIB 16 Nov 2026). Sumber kebenaran: `methodology/aturan-alur-first.md` (seksi D — Tahap E + C1–C9). Skill ini menuntun eksekusi; aturan ada di berkas itu.
+Tahap E = membuktikan/membantah mekanisme di fork live + mengukur P&L. Bentuk rinci = yang sudah dipraktikkan (diputus 22:33 WIB 16 Nov 2026). Sumber kebenaran: `methodology/aturan-alur-first.md` (seksi D — Tahap E + C1–C11). Skill ini menuntun eksekusi; aturan ada di berkas itu.
 
 ## Langkah
 
@@ -27,7 +27,8 @@ Parent menjalankan ulang semua tes forge sendiri dan mencocokkan gas (harus IDEN
 
 - Invariant: TERBANTAH / TERBUKTI / TIDAK KONKLUSIF → tulis ke registry (B06).
 - Tiga verdict terpisah per finding: mekanisme / eligibility bounty / dampak. Severity dari plafon TERAMATI, bukan kapabilitas. Klaim insidensi wajib analisis same-transaction. Plafon per-eksekusi tidak dikalikan tanpa bukti pengulangan.
-- 09 butuh P&L live > 0 / kerugian live terukur. TERBUKTI mekanisme + P&L live 0 = setara 06/08.
+- **C10 — definisi kerugian (mengikat, 17 Nov 2026):** kerugian = yang BISA DIBUKTIKAN merugikan — mekanisme jalan di fork/test atas kode+state nyata + plafon terukur + pemicu terjangkau lewat jalur operasi normal, tanpa peran istimewa dan tanpa state eksotis. **TIDAK HARUS LIVE** — P&L live 0 tidak lagi membuat lead DORMAN atau gugur.
+- **C11 — standar TERBUKTI (mengikat, 17 Nov 2026):** TERBUKTI = ada cukup jalur pendek yang saling bergantung dari pelanggaran invariant sampai kerugian terukur, diverifikasi lewat alur-alur TERKAIT. Tes yang berhenti di satu fungsi pendek lalu menyimpulkan = masih HIPOTESIS. Kartu E merumuskan rantai (a)+(b)+(c) sebagai SATU rantai yang diuji utuh.
 
 ## Disiplin bukti (mengikat)
 

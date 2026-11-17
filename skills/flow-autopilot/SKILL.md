@@ -24,7 +24,7 @@ Sumber kebenaran: `methodology/aturan-alur-first.md` + `methodology/rancangan-he
 Selama autopilot berjalan, Anda terikat pada 7 hukum mekanis yang tidak boleh dilanggar:
 
 1. **Jangan pernah mengandalkan ingatan chat (zero-trust):** di awal setiap transisi tahap, baca ulang dari disk — berkas aturan kanonik + ledger sisa + registry invariant + daftar jalur (D00) + berkas jalur yang sedang jalan. Output chat bukan acuan.
-2. **Jangan pernah melompati gate (verify-before-transition):** jangan ubah kursor ke tahap berikut sebelum gate tahap itu lulus — B13 scope lock, B8 live-match, gate finansial D (plafon live terukur), verifikasi parent atas bukti penentu di E, aturan verdict di G. Gate gagal → perbaiki di berkas kerja saat itu juga, jalankan ulang gate.
+2. **Jangan pernah melompati gate (verify-before-transition):** jangan ubah kursor ke tahap berikut sebelum gate tahap itu lulus — B13 scope lock, B8 live-match (cara kerja: alur + cek desain kode dulu, log tx = verifikator terakhir), gate finansial D (C10: kerugian yang bisa dibuktikan — plafon live 0 TIDAK membuat lead DORMAN), verifikasi parent atas bukti penentu di E, aturan verdict di G (C10 + C11). Gate gagal → perbaiki di berkas kerja saat itu juga, jalankan ulang gate.
 3. **Satu jalur, satu klaster, sampai selesai:** selesaikan satu jalur sebelum pindah jalur; selesaikan satu klaster sebelum pindah klaster (hukum §1).
 4. **Kuras habis antrean dengan rolling batch maks 3 ACTIVE di Tahap E:** tarik maks 3 kartu lead QUEUED dengan EV tertinggi, buktikan di E, adili di G, sampai QUEUED == 0 DAN ACTIVE == 0 — per jalur, lalu lanjut jalur berikut.
 5. **Larangan mutlak token kompresi malas:** jangan pernah menulis `...`, `dll.`, `dst.`, `etc.`, `and so on`, `rest of logic`, `rest of code` di berkas audit mana pun. Setiap klaim wajib punya jangkar verbatim `Path/File.ext:Lxx-Lyy` + batas fungsi diperiksa via `grep -n` (satu baris yang ada ≠ jangkar yang benar).
@@ -74,10 +74,10 @@ Jalankan B8 untuk jalur itu (sensus kaki + cek live pin, pakai ulang cache trunk
 Koordinator + 2 worker (kode saja, buta — tanpa katalog, tanpa badan fungsi klaster lain). Keluaran: OBS / G / R / Q. Verifikasi parent atas bukti penentu, lalu checkpoint.
 
 #### STEP D-WAVE2 — Gelombang 2 berpengetahuan
-Koordinator + 2 worker (katalog + cek live, pindai baru ≤10k blok, tanpa forge). Keluaran: QUEUED (P1–P5) + DORMAN + disposisi Q/RADAR. Verifikasi parent, checkpoint.
+Koordinator + 2 worker (katalog + cek live, pindai baru ≤10k blok, tanpa forge). Keluaran: QUEUED (P1–P5) + DORMAN (hanya bila gagal gate C10) + disposisi Q/RADAR. Verifikasi parent, checkpoint.
 
 #### STEP D-LEAD-CARDS — Kartu lead + invariant
-Koordinator sendiri: kartu 1:1 dari QUEUED + invariant baru ke registry (wajib sumber: field handoff atau docs/NatSpec). Gate finansial: hanya yang plafon live-nya terukur lanjut ke E; sisanya DORMAN dengan syarat buka-ulang. Verifikasi parent (subjek kartu identik kata-per-kata), checkpoint.
+Koordinator sendiri: kartu 1:1 dari QUEUED + invariant baru ke registry (wajib sumber: field handoff atau docs/NatSpec). Gate finansial (C10): lead lanjut ke E bila kerugian yang bisa dibuktikan (mekanisme jalan di fork/test + plafon terukur + pemicu terjangkau tanpa peran istimewa/state eksotis); plafon live 0 TIDAK membuat DORMAN; DORMAN hanya bila gagal C10, dengan syarat buka-ulang. Verifikasi parent (subjek kartu identik kata-per-kata), checkpoint.
 
 #### STEP E-BATCH — Uji test (loop, maks 3 per batch)
 Koordinator + 3 worker, fork blok pin. Tiap batch maks 3 kartu. Parent menjalankan ulang semua forge dan mencocokkan gas (harus IDENTIK) sebelum batch dinyatakan selesai. Ulangi sampai QUEUED == 0 DAN ACTIVE == 0 untuk jalur itu. Kartu yang spawn-nya ditolak kebijakan keamanan TIDAK diulang/diparafrase/diputar — parkir, invariant-nya tetap dirumuskan.
