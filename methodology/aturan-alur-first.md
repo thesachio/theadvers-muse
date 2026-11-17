@@ -351,7 +351,11 @@ C1. Fork-live: pengujian mengikuti kondisi live nyata — fork dibangun ke
 kondisi live (kontrak ter-deploy + state live pada blok yang di-pin),
 kecuali user sudah menjelaskan di awal proyek masih testnet/devnet.
 Mekanisme penentu wajib diuji ulang di fork live bila fork-testable;
-bila tidak fork-testable, catat eksplisit.
+bila tidak fork-testable, catat eksplisit. Sumber RPC (diputus Kim
+17 Nov 2026, mengikat): ALCHEMY UTAMA — key per-rantai dari .env /
+.env.rpc.secret dipakai lebih dulu lewat `rpc-env.sh <rantai>`;
+fallback ke public RPC (publicnode/dll di .env.rpc) hanya bila rantai
+itu tidak punya key alchemy ATAU alchemy gagal/limit.
 
 C2. Kejujuran bukti: label DIEKSEKUSI vs DIANALISIS vs
 CODE-REVIEW-ONLY; klaim yang gugur dicabut sampai ke dokumennya;

@@ -11,7 +11,7 @@ Tahap E = membuktikan/membantah mekanisme di fork live + mengukur P&L. Bentuk ri
 
 ### 1. Fork live (aturan fork-live, mengikat)
 
-Fork dibangun ke kondisi live (kontrak ter-deploy + state live pada blok yang di-pin), kecuali proyek sudah dinyatakan testnet/devnet di awal. PoC HEAD saja tidak cukup bila live ≠ HEAD. Mekanisme penentu wajib diuji ulang di fork live bila fork-testable; bila tidak fork-testable, catat keterbatasan itu secara eksplisit.
+Fork dibangun ke kondisi live (kontrak ter-deploy + state live pada blok yang di-pin), kecuali proyek sudah dinyatakan testnet/devnet di awal. PoC HEAD saja tidak cukup bila live ≠ HEAD. Mekanisme penentu wajib diuji ulang di fork live bila fork-testable; bila tidak fork-testable, catat keterbatasan itu secara eksplisit. **Sumber RPC (mengikat, 17 Nov 2026): ALCHEMY utama** — `rpc-env.sh <rantai>` otomatis memilih key alchemy per-rantai (dari `.env`/`.env.rpc.secret`) lebih dulu; **fallback public RPC** (publicnode/dll) hanya bila rantai tidak punya key ATAU alchemy gagal/limit. Free-tier alchemy ETH: `eth_getLogs` rentang dibatasi → chunking wajib.
 
 Satu fork per wilayah dipakai ulang; deploy_parity sekali + cache; satu harness dua mode (HEAD + fork); triase fork-testability di awal (aturan hemat Fase D — `methodology/rancangan-hemat-fase-d.md`).
 
