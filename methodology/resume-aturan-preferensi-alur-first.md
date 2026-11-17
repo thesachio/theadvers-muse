@@ -248,7 +248,9 @@ penutupan B9 (dieksekusi di akhir; bahannya yang wajib ada di Tahap B).
   TANPA state eksotis; TIDAK HARUS LIVE (kejadian nyata / P&L live /
   korban nyata bukan syarat). Konsekuensi: gate D — plafon live 0 tidak
   lagi membuat lead DORMAN; verdict 09 — tidak lagi mensyaratkan P&L live
-  > 0. Sama dengan standar tiga tingkat Kim 23 Okt 2026.
+  > 0. Sama dengan standar tiga tingkat Kim 23 Okt 2026. Ambang kerugian
+  (direvisi 17 Nov 2026, perintah Kim): potensi kerugian ≥ $1 = BUKAN
+  debu — kandidat sah, disimpan; hanya yang < $1 yang gugur DUST.
 - C11 Standar bukti TERBUKTI — jalur pendek yang saling bergantung (diputus
   17 Nov 2026, perintah Kim 12:14 WIB): TERBUKTI = ada CUKUP jalur pendek
   yang saling bergantung (1 atau beberapa) dari pelanggaran invariant

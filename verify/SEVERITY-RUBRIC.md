@@ -129,7 +129,7 @@ menguntungkan diri sendiri secara diam-diam.
   dengan asumsi yang dinyatakan.
 - **QA** = Low risk (state handling, function incorrect as to spec, komentar) **+**
   Governance/Centralization risk (**termasuk admin privileges**).
-- Loss of **dust** = QA/Low. Loss of **unmatured yield** = maksimal Medium.
+- Loss of **dust** (nilai < $1) = QA/Low. Loss of **unmatured yield** = maksimal Medium. **Ambang kerugian (17 Nov 2026, perintah Kim): potensi kerugian ≥ $1 = BUKAN debu — kandidat sah.**
 - **User mistake** (careless input) = QA at best.
 - **Admin:** role dianggap trustworthy; *"Mistakes in code only unblocked through admin mistakes
   should be submitted within a QA Report."*
@@ -338,7 +338,7 @@ dan menaikkannya menuntut klaim kerugian yang tidak ada buktinya.
 |---|---|
 | Butuh admin/role tanpa jalur eksternal | **Low** (L4) |
 | Weird ERC20 / fee-on-transfer | **Low** |
-| Dust / pembulatan tak dapat dilipatgandakan | **Low** → bila murni debu: gugur (`REJECTED_DUST`) |
+| Dust / pembulatan tak dapat dilipatgandakan (nilai < $1) | **Low** → bila murni debu (< $1): gugur (`REJECTED_DUST`); **potensi kerugian ≥ $1 = BUKAN debu — kandidat sah (17 Nov 2026)** |
 | Design decision tanpa kerugian dana | **Informational** |
 | Butuh user error | **Informational** |
 | Butuh oracle meretas diri sendiri | **gugur** (`REJECTED_PRIVILEGED_FANTASY`) |

@@ -12,7 +12,7 @@ Tahap G = mengadili tiap kandidat dan menghitung distribusi akhir di seluruh pro
 ### 1. Verdict per kandidat: 06 / 07 / 08 / 09
 
 - **09 — temuan terkonfirmasi:** mekanisme TERBUKTI + kerugian yang bisa dibuktikan (C10) — P&L live > 0 TIDAK lagi disyaratkan; standar TERBUKTI mengikuti C11 (rantai jalur saling bergantung, bukan satu fungsi pendek).
-- **08 — valid tapi tidak memenuhi syarat:** mekanisme terbukti, tapi out-of-scope / known / peran terpercaya / debu.
+- **08 — valid tapi tidak memenuhi syarat:** mekanisme terbukti, tapi out-of-scope / known / peran terpercaya / debu (< $1). **Ambang kerugian (17 Nov 2026): potensi kerugian ≥ $1 = BUKAN debu — kandidat sah; hanya < $1 yang gugur DUST ke 06.**
 - **07 — butuh langkah lanjut:** logika belum terbantahkan, tapi butuh verifikasi lanjutan (state on-chain spesifik, komponen eksternal).
 - **06 — terbantahkan / tidak valid:** mekanisme patah saat pembuktian.
 

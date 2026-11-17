@@ -399,7 +399,9 @@ kerugian yang bisa dibuktikan seperti di atas. Ini sama dengan
 standar tiga tingkat Kim 23 Okt 2026 (mekanisme jalan di lab = syarat
 perlu; ambang submittable = pemicu terjangkau operasi normal tanpa
 role istimewa/state eksotis + PoC runnable atas kode/state nyata +
-plafon terukur; korban nyata tidak wajib).
+plafon terukur; korban nyata tidak wajib). Ambang kerugian (direvisi
+17 Nov 2026, perintah Kim): potensi kerugian ≥ $1 = BUKAN debu —
+kandidat sah, disimpan; hanya yang < $1 yang gugur DUST.
 
 C11. Standar bukti TERBUKTI — jalur pendek yang saling bergantung (diputus 17 Nov 2026,
 perintah Kim 12:14 WIB): TERBUKTI = ada CUKUP jalur pendek yang saling bergantung
