@@ -46,6 +46,8 @@ Scope mapping = usaha yang cukup + 4 mekanisme deteksi miss di eksplorasi: (1) b
 - **B11:** handoff dienumerasi dari batas unit (N unit → N−1 handoff); simpul fork/join jadi unit.
 - **B13:** scope lock (daftar berkas cocok persis inventaris kanonik/diff kosong, commit terverifikasi, contracts/ bersih).
 - **B12:** Tahap B TIDAK membuat invariant — hanya yang riil/teramati (sensus + klaster + daftar handoff). Invariant dirumuskan di Tahap D.
+- **B4:** yang BISA dipecah per klaster = inventaris alur + segmentasi + kontrak handoff + (di tahap berikut) invariant, uji invariant, komposisi, verdict. Sensus/daftar scope/registry = utuh lintas protokol.
+- **B5:** peta UTUH dulu, bukti just-in-time — mapping awal jalur + relasi wajib menyeluruh (cakupan); kerja yang bisa dikerjakan di fase/klaster spesifik TIDAK dijalankan di scope besar.
 
 ## Yang TIDAK dilakukan di Tahap B (11 larangan)
 

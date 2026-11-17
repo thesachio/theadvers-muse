@@ -36,3 +36,10 @@ Hitung distribusi akhir (06/07/08/09) di seluruh protokol. **HOLD (mengikat): NO
 
 - `G01-VERDICT.md` — verdict per kandidat + distribusi akhir.
 - Draf temuan 09 (format `templates/` — laporan teknis + email, identitas pengirim belum diisi sampai Kim memerintah).
+
+## Preferensi mengikat yang menyentuh G (ringkas dari aturan kanonik C1–C11)
+
+- **C7 — bahasa:** Indonesia ringan dan sederhana (semua verdict, laporan, draf).
+- **C8 — keep-hunting:** tolak kesimpulan prematur "no vulnerability"; hasil kecil berharga; tetapkan target lanjutan konkret, bukan menyatakan permukaan bersih.
+- **C4 — ambang $500 bukan ambang batas:** yang merugikan disimpan sebagai kandidat berapa pun kecilnya; floor $500 hanya konteks eligibility. Tersimpan ≠ tersubmit.
+- **C5 — HOLD:** nol submisi/kontak program/draf kirim tanpa persetujuan eksplisit per kandidat.

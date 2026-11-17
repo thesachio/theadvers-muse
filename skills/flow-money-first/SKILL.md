@@ -23,7 +23,7 @@ A INTEL (brief 9 butir, pin commit + blok referensi) → B Mapping (sensus 100% 
 
 - B13 scope lock sebelum sensus (daftar berkas cocok persis, diff kosong, commit terverifikasi).
 - B8 live-match diulang di awal fase uji per klaster, sebelum PoC. Tidak live-match → wadah TUNDA-LIVE (tercatat di ledger, nol waktu eksekusi).
-- Gate finansial di Tahap D: lead masuk Tahap E hanya bila punya plafon live terukur; plafon live 0 → DORMAN.
+- Gate finansial di Tahap D (C10): lead masuk Tahap E bila kerugian yang bisa dibuktikan — mekanisme jalan di fork/test + plafon terukur + pemicu terjangkau tanpa peran istimewa/state eksotis. Plafon live 0 TIDAK membuat lead DORMAN.
 - Batch Tahap E maksimal 3 kartu.
 - Lantai bawah: baca kode, ukur live, verifikasi parent atas bukti penentu. Tidak boleh dipangkas.
 - HOLD: nol submisi / kontak program / draf laporan tanpa persetujuan eksplisit per kandidat.

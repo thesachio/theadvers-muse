@@ -25,6 +25,7 @@ Uji F **TIDAK menjalankan fork ulang dan TIDAK menjalankan PoC ulang — pakai d
 
 - Segmen terbukti (Tahap E) + handoff cocok + simpul terbukti + jalur gabungan dirangkai dari data terbaru.
 - Bila rangkaiannya menemukan ketidakcocokan (mis. handoff yang tidak menutup, simpul yang macet), catat sebagai temuan komposisi dan kembalikan ke Tahap D/E yang bersangkutan — jangan diam-diam menambal.
+- **C11 berlaku ke lemma:** jalur gabungan yang dirangkai wajib memuat cukup jalur pendek yang saling bergantung dari pelanggaran invariant sampai kerugian terukur — rangkaian yang berhenti di satu segmen = masih HIPOTESIS, bukan lemma TERBUKTI.
 
 ## Keluaran
 
