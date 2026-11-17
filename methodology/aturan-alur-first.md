@@ -363,9 +363,10 @@ yang sama; pindai besar dibuktikan sensus (rentang + chunk + cakupan)
 atau dilabeli SAMPEL persis; langkah belum dijalankan = langkah
 terbuka, bukan rejection/finding; koreksi label di dokumen yang sama.
 
-C4. Ambang $500 bukan ambang batas: apapun yang merugikan protokol /
+C4. Ambang $1 bukan ambang batas (direvisi 17 Nov 2026, perintah Kim:
+dari $500 turun ke $1): apapun yang merugikan protokol /
 sistem yang salah DISIMPAN sebagai kandidat berapapun kecilnya; floor
-$500 hanya konteks eligibility. Tersimpan ≠ tersubmit.
+$1 hanya konteks eligibility. Tersimpan ≠ tersubmit.
 
 C5. HOLD: nol submisi / kontak program tanpa persetujuan eksplisit per
 kandidat; jangan buat draf laporan submisi tanpa instruksi eksplisit.

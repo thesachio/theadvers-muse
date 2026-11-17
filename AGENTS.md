@@ -40,7 +40,7 @@ Rolling per klaster: C → D → E. Tahap F lintas-klaster + Tahap G di akhir. D
 
 ## 4. Preferensi mengikat (C1–C11, ringkas — lengkapnya di berkas aturan)
 
-C1 fork-live. C2 kejujuran bukti (DIEKSEKUSI vs DIANALISIS vs CODE-REVIEW-ONLY). C3 verify_zero_and_scan. C4 ambang $500 bukan ambang batas. C5 HOLD — nol submisi/kontak program/draf tanpa persetujuan eksplisit per kandidat. C6 tiga verdict terpisah; severity dari plafon teramati; insidensi same-tx. C7 bahasa Indonesia ringan dan sederhana. C8 keep-hunting. C9 /stop mencabut otorisasi round seketika. C10 kerugian = yang bisa dibuktikan (mekanisme + plafon terukur + pemicu terjangkau; TIDAK harus live). C11 TERBUKTI = cukup jalur pendek saling bergantung dari pelanggaran invariant ke kerugian terukur; tes yang berhenti di satu fungsi pendek = masih HIPOTESIS.
+C1 fork-live. C2 kejujuran bukti (DIEKSEKUSI vs DIANALISIS vs CODE-REVIEW-ONLY). C3 verify_zero_and_scan. C4 ambang $1 bukan ambang batas. C5 HOLD — nol submisi/kontak program/draf tanpa persetujuan eksplisit per kandidat. C6 tiga verdict terpisah; severity dari plafon teramati; insidensi same-tx. C7 bahasa Indonesia ringan dan sederhana. C8 keep-hunting. C9 /stop mencabut otorisasi round seketika. C10 kerugian = yang bisa dibuktikan (mekanisme + plafon terukur + pemicu terjangkau; TIDAK harus live). C11 TERBUKTI = cukup jalur pendek saling bergantung dari pelanggaran invariant ke kerugian terukur; tes yang berhenti di satu fungsi pendek = masih HIPOTESIS.
 
 ## 5. Lantai bawah + hemat
 

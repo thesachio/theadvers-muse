@@ -227,8 +227,9 @@ penutupan B9 (dieksekusi di akhir; bahannya yang wajib ada di Tahap B).
   error; kontrol positif bukan-nol lewat jalur sama; pindai besar
   dibuktikan sensus atau dilabeli SAMPEL persis; langkah belum dijalankan =
   terbuka, bukan rejection/finding; koreksi label di dokumen yang sama.
-- C4 Ambang $500 bukan ambang: apapun yang merugikan protokol/sistem yang
-  salah DISIMPAN sebagai kandidat berapapun kecilnya; floor $500 hanya
+- C4 Ambang $1 bukan ambang (direvisi 17 Nov 2026, perintah Kim: dari
+  $500 turun ke $1): apapun yang merugikan protokol/sistem yang
+  salah DISIMPAN sebagai kandidat berapapun kecilnya; floor $1 hanya
   konteks eligibility; tersimpan ≠ tersubmit.
 - C5 HOLD: nol submisi/kontak program tanpa persetujuan eksplisit per
   kandidat; jangan buat draf submisi tanpa instruksi eksplisit.

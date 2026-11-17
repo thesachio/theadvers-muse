@@ -41,5 +41,5 @@ Hitung distribusi akhir (06/07/08/09) di seluruh protokol. **HOLD (mengikat): NO
 
 - **C7 — bahasa:** Indonesia ringan dan sederhana (semua verdict, laporan, draf).
 - **C8 — keep-hunting:** tolak kesimpulan prematur "no vulnerability"; hasil kecil berharga; tetapkan target lanjutan konkret, bukan menyatakan permukaan bersih.
-- **C4 — ambang $500 bukan ambang batas:** yang merugikan disimpan sebagai kandidat berapa pun kecilnya; floor $500 hanya konteks eligibility. Tersimpan ≠ tersubmit.
+- **C4 — ambang $1 bukan ambang batas (direvisi 17 Nov 2026, dari $500 turun ke $1):** yang merugikan disimpan sebagai kandidat berapa pun kecilnya; floor $1 hanya konteks eligibility. Tersimpan ≠ tersubmit.
 - **C5 — HOLD:** nol submisi/kontak program/draf kirim tanpa persetujuan eksplisit per kandidat.
