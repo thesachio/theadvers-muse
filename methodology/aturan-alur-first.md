@@ -146,6 +146,10 @@ ledger sisa (tetap terhitung, bukan hilang); nol waktu eksekusi
 (tanpa PoC, tanpa fork); dibuka lagi hanya bila deployment live muncul
 atau Kim memerintah cek ulang; wadah ditinjau ulang di sapuan akhir.
 
+Utamakan alur, log untuk verifikator terakhir (diputus 17 Nov 2026 08:26 WIB, perintah Kim, MENGIKAT untuk semua B8 berikut): tahu suatu mekanisme work atau tidak dari tes tool (baca kode + cast/cek live + uji fork di Tahap E), BUKAN dari mengandalkan log tx orang lain di blockchain. Pindai log itu pilihan terakhir yang mahal — hanya untuk verifikator akhir (Tahap G / sapuan akhir), bukan cara kerja B8. Pemicu: B8 P4 memakan ~8,5 jam memindai RelayedRootBundle per rantai (BSC gagal total lewat log, Base gagal per chunk ~20 menit/chunk); koordinator dialihkan 08:26 WIB — hentikan semua pindai log, selesaikan B8 dari alur + 5 rantai yang sudah terukur (ETH 63, OP 63, Polygon 63, Linea 58, BSC 63; slowRelayRoot non-zero 0 di semua).
+
+Cek desain kode dulu (diputus 17 Nov 2026 ~08:33 WIB, perintah Kim, MENGIKAT): untuk tahu suatu nilai 0 atau bukan, cek dari desain kode apakah DISET 0 oleh kode atau MEMANG BISA MEMUAT — jangan simpulkan dari log. Contoh P4: slowRelayRoot = parameter input proposer di `proposeRootBundle` HubPool.sol:565, disimpan verbatim :579, diteruskan verbatim :685, TIDAK ada require/validasi atasnya — jadi BISA MEMUAT non-zero by design; live 0 berasal dari proposer/off-chain (0 RequestedSlowFill), bukan dari batasan kode.
+
 B9. Scope mapping cukup usaha yang cukup — miss bisa terdeteksi di
 eksplorasi lewat: (1) baca ulang mendalam per klaster; (2) cek handoff
 + konservasi (delta tak terjawab diselidiki); (3) jejak event live
@@ -380,16 +384,32 @@ C9. /stop atau perintah berhenti eksplisit mencabut otorisasi round
 seketika: hentikan subagent, tulis nol berkas, lanjutkan hanya atas
 perintah eksplisit baru.
 
+C10. Definisi kerugian — yang bisa dibuktikan (diputus 17 Nov 2026,
+perintah Kim): kerugian = sesuatu yang BISA DIBUKTIKAN merugikan —
+mekanisme jalan di fork/test atas kode + state nyata, dengan plafon
+terukur — dan pemicunya terjangkau lewat jalur operasi normal, TANPA
+peran istimewa dan TANPA state eksotis. TIDAK HARUS LIVE: kejadian
+nyata / P&L live / korban nyata BUKAN syarat. Konsekuensi: (a) gate
+finansial Tahap D — lead yang mekanismenya terbukti + pemicunya
+terjangkau + plafonnya terukur dihitung punya kerugian walau P&L
+live-nya 0, jadi TIDAK lagi DORMAN hanya karena plafon live 0;
+(b) verdict 09 — tidak lagi mensyaratkan P&L live > 0; syaratnya
+kerugian yang bisa dibuktikan seperti di atas. Ini sama dengan
+standar tiga tingkat Kim 23 Okt 2026 (mekanisme jalan di lab = syarat
+perlu; ambang submittable = pemicu terjangkau operasi normal tanpa
+role istimewa/state eksotis + PoC runnable atas kode/state nyata +
+plafon terukur; korban nyata tidak wajib).
+
 ## D. Tahap C–G — modular (15 Nov 2026, perintah Kim: pisah modular seperti versi triangle; pemetaan mendalam jadi Tahap C, 15 Nov 2026, perintah Kim 'nomor baru saja')
 
 Pemetaan huruf (15 Nov 2026, perintah Kim 'ubah tahap jadi huruf saja'): Tahap A = INTEL (dulu Tahap 0), B = Mapping (dulu Tahap 1), C = Pemetaan mendalam per klaster (dulu Tahap 2), D = Eksplorasi (dulu Tahap 3), E = Uji test (dulu Tahap 4), F = Komposisi (dulu Tahap 5, USULAN), G = Verdict (dulu Tahap 6). Output tiap tahap: `<huruf><NN>-<NAMA>`, mis. B01-SCOPE, C01-FLOW-INVENTORY. Penomoran aturan (A1–A5, B1–B16, C1–C9) dan SM/INV tidak berubah — namespace terpisah.
 
 - Tahap B — Mapping: sensus + klaster + daftar jahitan + ledger sisa + registry (B1–B16). Tanpa invariant (B12), tanpa pemetaan mendalam, tanpa buruan/PoC/verdict.
 - Tahap C — Pemetaan mendalam per klaster: inventaris alur + segmentasi + kontrak handoff deskriptif per klaster (B12, B16). Tanpa invariant, tanpa buruan/PoC/verdict.
-- Tahap D — Eksplorasi: buruan per segmen/handoff/simpul; merumuskan invariant tiap kandidat (wajib cantumkan sumber: field handoff atau docs/NatSpec) + kartu lead (tiap kartu lead wajib klaim finansial sendiri). Tanpa PoC. Diputus 22:33 WIB 16 Nov 2026: unit round = per-alur, dua gelombang (buta → berpengetahuan + katalog 52 plugin); daftar alur (enumerasi + EV, dari B02+B04) adalah prasyarat sebelum D.
+- Tahap D — Eksplorasi: buruan per segmen/handoff/simpul; merumuskan invariant tiap kandidat (wajib cantumkan sumber: field handoff atau docs/NatSpec) + kartu lead (tiap kartu lead wajib klaim finansial sendiri). Tanpa PoC. Diputus 22:33 WIB 16 Nov 2026: unit round = per-alur, dua gelombang (buta → berpengetahuan + katalog 52 plugin); daftar alur (enumerasi + EV, dari B02+B04) adalah prasyarat sebelum D. Diputus 17 Nov 2026: gate finansial — plafon live 0 TIDAK lagi membuat lead DORMAN; yang menentukan kerugian yang bisa dibuktikan (C10).
 - Tahap E — Uji test: PoC fork-live + P&L terukur per kandidat; membuktikan/membantah mekanisme. Diputus 22:33 WIB 16 Nov 2026: bentuk rinci = yang sudah dipraktikkan (batch maks 3, fork blok pin + P&L terukur); verdict mengikuti bentuk yang sekarang (06/07/08/09).
 - Tahap F — Komposisi (DITERIMA BERSYARAT, diputus Kim 22:33 WIB 16 Nov 2026: 'terima jika memang penting dan urgent'): HANYA untuk lead multi-segmen; F hanya dijalankan bila penting dan urgent. Uji F TIDAK menjalankan fork ulang dan TIDAK menjalankan PoC ulang — pakai data terbaru (hasil Tahap E); bukti komposisi = lemma (segmen terbukti + handoff cocok + simpul terbukti + jalur gabungan dirangkai dari data terbaru). Lead satu segmen LEWATI Tahap F (PoC Tahap E sudah final).
-- Tahap G — Verdict: verdict per kandidat (06/07/08/09; tiga verdict terpisah; severity dari plafon teramati); distribusi akhir dihitung di seluruh protokol. Diputus 22:33 WIB 16 Nov 2026: bentuk rinci = yang sudah dipraktikkan (verdict mengikuti bentuk yang sekarang).
+- Tahap G — Verdict: verdict per kandidat (06/07/08/09; tiga verdict terpisah; severity dari plafon teramati); distribusi akhir dihitung di seluruh protokol. Diputus 22:33 WIB 16 Nov 2026: bentuk rinci = yang sudah dipraktikkan (verdict mengikuti bentuk yang sekarang). Diputus 17 Nov 2026: verdict 09 TIDAK lagi mensyaratkan P&L live > 0; syaratnya kerugian yang bisa dibuktikan (C10).
 
 Rolling per klaster: Tahap C klaster → Tahap D klaster → Tahap E klaster → …; Tahap F lintas-klaster + Tahap G di akhir. Bentuk rinci Tahap D/E/G sudah diputus 22:33 WIB 16 Nov 2026 (lihat butir di atas); bentuk rinci Tahap C sudah terbukti di pilot (8 round). Deep-run per jalur (diputus Kim 22:33 WIB 16 Nov 2026): satu perintah berdiri hulu→hilir sampai verdict per lead, tanpa tap antar langkah; berlaku mulai jalur berikut (P4 — P3 sudah jalan step-by-step).
 
