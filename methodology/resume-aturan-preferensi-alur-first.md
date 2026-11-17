@@ -6,6 +6,7 @@ fase A B C"): Tahap C selesai, B16 dilaksanakan di pilot (status: TIDAK DIPAKAI 
 dilewati, SM-05 + daftar alur + bentuk Tahap D masih terbuka.
 Revisi 16 Nov 2026 22:33 WIB: 10 butir diputus Kim (lihat §10) — B16 TIDAK DIPAKAI; Tahap F diterima bersyarat; Tahap D per-alur + dua gelombang; Tahap E/G bentuk rinci = yang dipraktikkan; B9 rerun diterima; A5 dua celah diterima; arah metode = pakai paling mutakhir; deep-run per jalur; larangan filter ditulis; SM-05 dieksplorasi ketika terkait.
 Revisi 17 Nov 2026 (perintah Kim): C10 — definisi kerugian = yang bisa dibuktikan (mekanisme jalan di fork/test atas kode+state nyata + plafon terukur + pemicu terjangkau operasi normal tanpa peran istimewa/state eksotis; TIDAK harus live) — gate D: plafon live 0 tidak lagi membuat lead DORMAN; verdict 09 tidak lagi mensyaratkan P&L live > 0.
+Revisi 17 Nov 2026 (perintah Kim 12:14 WIB): C11 — standar bukti TERBUKTI = ada CUKUP jalur pendek yang saling bergantung (1 atau beberapa) dari pelanggaran invariant sampai ke kerugian yang terukur, lewat verifikasi alur-alur TERKAIT; tes yang berhenti di satu fungsi pendek lalu menyimpulkan = masih HIPOTESIS — kartu E yang buktinya cuma satu fungsi pendek harus dinilai ulang; Gelombang 1/2 tidak memberi verdict TERBUKTI.
 Yang mengikat = berkas aturan kanonik `aturan-alur-first.md`; bila resume
 ini berbeda dengan berkas aturan, berkas aturan yang berlaku. Acuan
 workflow Tahap B: `acuan-workflow-tahap-B.md`. Draf usulan awal:
@@ -198,10 +199,13 @@ penutupan B9 (dieksekusi di akhir; bahannya yang wajib ada di Tahap B).
   berpengetahuan + katalog 52 plugin); daftar alur (enumerasi + EV, dari
   B02+B04) adalah prasyarat sebelum D. DIPUTUS 17 Nov 2026: gate finansial
   — plafon live 0 TIDAK lagi membuat lead DORMAN; yang menentukan kerugian
-  yang bisa dibuktikan (C10).
+  yang bisa dibuktikan (C10). DIPUTUS 17 Nov 2026: standar TERBUKTI —
+  kartu E yang buktinya cuma satu fungsi pendek harus dinilai ulang;
+  Gelombang 1/2 tidak memberi verdict TERBUKTI (C11).
 - E — Uji test: PoC fork-live + P&L terukur per kandidat. Bentuk rinci
   DIPUTUS 22:33 WIB 16 Nov 2026: yang sudah dipraktikkan (batch maks 3,
-  fork blok pin + P&L).
+  fork blok pin + P&L). DIPUTUS 17 Nov 2026: Tahap E membuktikan rantai
+  (a)+(b)+(c) sebagai satu rantai, bukan hanya satu fungsi (C11).
 - F — Komposisi (DITERIMA BERSYARAT 22:33 WIB 16 Nov 2026: hanya bila
   penting dan urgent): hanya lead multi-segmen; uji F pakai data terbaru,
   tanpa fork/PoC ulang; lead satu segmen lewati F. Bukti = lemma.
@@ -209,9 +213,10 @@ penutupan B9 (dieksekusi di akhir; bahannya yang wajib ada di Tahap B).
   severity dari plafon teramati); distribusi akhir di seluruh protokol.
   Bentuk rinci DIPUTUS 22:33 WIB 16 Nov 2026: yang sudah dipraktikkan.
   DIPUTUS 17 Nov 2026: verdict 09 TIDAK lagi mensyaratkan P&L live > 0;
-  syaratnya kerugian yang bisa dibuktikan (C10).
+  syaratnya kerugian yang bisa dibuktikan (C10). DIPUTUS 17 Nov 2026:
+  verdict memakai standar TERBUKTI (C11) bersama C10.
 
-## 9. Preferensi mengikat (C1–C10)
+## 9. Preferensi mengikat (C1–C11)
 
 - C1 Fork-live: fork ke kondisi live (blok pin), kecuali user bilang
   testnet/devnet di awal; mekanisme penentu diuji ulang di fork live bila
@@ -243,6 +248,18 @@ penutupan B9 (dieksekusi di akhir; bahannya yang wajib ada di Tahap B).
   korban nyata bukan syarat). Konsekuensi: gate D — plafon live 0 tidak
   lagi membuat lead DORMAN; verdict 09 — tidak lagi mensyaratkan P&L live
   > 0. Sama dengan standar tiga tingkat Kim 23 Okt 2026.
+- C11 Standar bukti TERBUKTI — jalur pendek yang saling bergantung (diputus
+  17 Nov 2026, perintah Kim 12:14 WIB): TERBUKTI = ada CUKUP jalur pendek
+  yang saling bergantung (1 atau beberapa) dari pelanggaran invariant
+  sampai ke kerugian yang terukur; kerugian diukur lewat verifikasi
+  alur-alur TERKAIT, bukan simpulan di dalam satu fungsi pendek — tes yang
+  berhenti di satu fungsi pendek lalu menyimpulkan = masih HIPOTESIS.
+  Konsekuensi: kartu E yang buktinya cuma satu fungsi pendek harus dinilai
+  ulang; Gelombang 1/2 tidak memberi verdict TERBUKTI (tiap observasi/
+  jawaban dilabeli DIANALISIS + dicatat alur terkait yang masih kurang);
+  kartu lead merumuskan rantai (a)+(b)+(c) sebagai satu rantai yang harus
+  diuji Tahap E; verdict 09/G memakai standar ini bersama C10. Berlaku ke
+  G02 juga (buka ulang P7) dan mulai P8.
 
 ## 10. Keputusan yang sudah diputus (log singkat)
 
@@ -277,6 +294,7 @@ penutupan B9 (dieksekusi di akhir; bahannya yang wajib ada di Tahap B).
   butuh keputusan Kim tentang konsumennya); H 0, E 0.
 - 16 Nov 2026 (22:33 WIB): 10 butir diputus Kim — (1) B16 TIDAK DIPAKAI; (2) Tahap F DITERIMA BERSYARAT (hanya bila penting dan urgent); (3) Tahap D per-alur + dua gelombang; (4) Tahap E/G bentuk rinci = yang dipraktikkan, uji F tanpa fork/PoC ulang (data terbaru); (5) B9 rerun sensus manual DITERIMA; (6) A5 dua celah DITERIMA; (7) arah metode: pakai paling mutakhir (flow money first = metode kerja aktif); (8) deep-run per jalur DITERIMA (mulai P4); (9) larangan filter di dalam klaster DITULIS ke berkas kanonik; (10) SM-05 tetap dieksplorasi ketika terkait.
 - 17 Nov 2026 (perintah Kim "tulis begitu"): C10 — definisi kerugian = yang bisa dibuktikan (bukan syarat istimewa, tidak harus live); gate D dan syarat 09 direvisi mengikuti definisi ini.
+- 17 Nov 2026 (perintah Kim 12:14 WIB): C11 — standar bukti TERBUKTI = jalur pendek yang saling bergantung sampai ke kerugian terukur lewat alur terkait; tes satu fungsi pendek lalu menyimpulkan = masih HIPOTESIS; kartu E yang buktinya cuma satu fungsi pendek harus dinilai ulang; berlaku ke G02 juga (buka ulang P7) dan mulai P8.
 
 ## 11. Belum diputus
 
@@ -307,7 +325,7 @@ penutupan B9 (dieksekusi di akhir; bahannya yang wajib ada di Tahap B).
 
 ## 13. Berkas kanonik & cara pakai
 
-- Aturan kanonik: `aturan-alur-first.md` (A1–A5, B1–B16, C1–C10, seksi D,
+- Aturan kanonik: `aturan-alur-first.md` (A1–A5, B1–B16, C1–C11, seksi D,
   wajib/TIDAK, Belum diputus).
 - Acuan workflow Tahap B: `acuan-workflow-tahap-B.md` (konsolidasi +
   definisi + artefak; pekerja Tahap B jalan dari berkas ini + INTEL
